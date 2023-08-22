@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário e Grau de Risco</title>
+    <style>
+        /* Estilos ... */
+    </style>
+    <script>
+        function calcularGrauRisco() {
+            const tempoSintomas = parseInt(document.getElementById("tempoSintomas").value);
+            const nivelDor = parseInt(document.getElementById("nivelDor").value);
+            const tomouMedicamento = document.getElementById("tomouMedicamento").value;
+
+            let grauRisco = "";
+
+            if (tempoSintomas < 30 && nivelDor >= 7) {
+                grauRisco = "Vermelho";
+            } else if (tempoSintomas < 120 && nivelDor >= 5) {
+                grauRisco = "Laranja";
+            } else if (tempoSintomas < 240 && nivelDor >= 4 && tomouMedicamento === "sim") {
+                grauRisco = "Amarelo";
+            } else {
+                grauRisco = "Verde";
+            }
+
+            document.getElementById("resultadoRisco").innerHTML = `Seu grau de risco no Protocolo de Manchester é: ${grauRisco}`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <!-- ... -->
+    </header>
+    <div class="container">
+        <h2>Questionário de Sintomas</h2>
+        <form>
+            <label for="tempoSintomas">1. Há quanto tempo está sentindo os sintomas? (em minutos)</label>
+            <input type="number" id="tempoSintomas" required>
+            
+            <label for="nivelDor">2. Qual é o nível de dor que você está sentindo? (de 0 a 10)</label>
+            <input type="number" id="nivelDor" min="0" max="10" required>
+            
+            <label for="tomouMedicamento">3. Você tomou algum medicamento para aliviar os sintomas?</label>
+            <select id="tomouMedicamento">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            
+            <button type="button" onclick="calcularGrauRisco()">Calcular Grau de Risco</button>
+        </form>
+        
+        <p id="resultadoRisco"></p>
+    </div>
+</body>
+</html>
+
+
