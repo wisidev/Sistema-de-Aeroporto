@@ -1,0 +1,83 @@
+import java.util.*;
+
+// Classe para representar um voo
+class Flight {
+    private int flightNumber;
+    private String origin;
+    private String destination;
+    private Date departureTime;
+    private Date arrivalTime;
+    private int maxPassengers;
+    private List<Passenger> passengers = new ArrayList<>();
+
+    // Construtor para criar um voo
+    public Flight(int flightNumber, String origin, String destination, Date departureTime, Date arrivalTime, int maxPassengers) {
+        this.flightNumber = flightNumber;
+        this.origin = origin;
+        this.destination = destination;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+        this.maxPassengers = maxPassengers;
+    }
+
+    // Métodos para gerenciar reservas de passageiros
+    public boolean addPassenger(Passenger passenger) {
+        // Implemente lógica para adicionar passageiro a este voo
+        return false;
+    }
+
+    public boolean isFull() {
+        // Implemente lógica para verificar se o voo está cheio
+        return passengers.size() >= maxPassengers;
+    }
+}
+
+// Classe para representar um passageiro
+class Passenger {
+    private String name;
+    private int age;
+    private String cpf;
+    private String email;
+
+    public Passenger(String name, int age, String cpf, String email) {
+        this.name = name;
+        this.age = age;
+        this.cpf = cpf;
+        this.email = email;
+    }
+}
+
+// Classe para o sistema de controle do aeroporto
+public class AirportSystem {
+    private List<Flight> flights = new ArrayList<>();
+    private Queue<Passenger> pendingReservations = new LinkedList<>();
+    private Stack<Passenger> checkedInPassengers = new Stack<>();
+
+    // Métodos para adicionar voos ao sistema
+    public void addFlight(Flight flight) {
+        flights.add(flight);
+    }
+
+    // Métodos para realizar reservas
+    public boolean makeReservation(Flight flight, Passenger passenger) {
+        // Implemente a lógica para realizar a reserva
+        return false;
+    }
+
+    // Métodos para processar reservas pendentes
+    public void processReservations() {
+        // Implemente a lógica para processar as reservas pendentes
+    }
+
+    // Métodos para realizar check-in
+    public boolean checkIn(Passenger passenger) {
+        // Implemente a lógica para realizar o check-in do passageiro
+        return false;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Crie instâncias do sistema, voos e passageiros aqui e realize as operações necessárias.
+    }
+}
