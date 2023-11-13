@@ -1,0 +1,93 @@
+body{
+
+    background-image: url(../img/aviao2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+li{
+    display: inline-block;
+    margin: 20px;
+    font-size: 20px;
+}
+
+h1{ margin-right: 50px;
+    color:#0066ff;
+
+    font-weight: 200;
+}
+main{ color: #0066ff;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+h2{
+    font-size: 56px;
+    line-height: 10px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+span{
+    color:white;
+
+
+}
+#Reserva-btn {
+color: rgb(132,14,201);
+border:2px solid rgb(132,14,201);
+padding: 10px;
+border-radius: 20px;
+}
+#Reserva-btn:hover{
+    background-color: white;
+}
+
+form{ color: #0066ff;
+     display: flex;
+     flex-direction: column;
+     width: 70%;
+
+}
+
+
+input{
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+
+img{ margin-left: 110px;
+    margin-top: 110px;
+    width: 400px;
+    height: 250;
+    border-radius:50%;
+    
+}
+p{ color:white;
+    line-height: 20px;
+    max-width: 400px;
+}
+a{ 
+    color:#0066ff;
+}
+a:hover{
+    color:rgb(132,14,201);
+    transition: 0.3s all;
+}
