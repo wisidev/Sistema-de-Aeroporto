@@ -5,3 +5,4 @@ Gustavo Cardoso Rodrigues;
 João Pedro Rezende;
 Richard Custodio;
 Ailan Neves do Amaral.
+Hercules Otavio Habib Dantas Mesquita
